@@ -1,5 +1,15 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1 @click="$router.go(-1)">About</h1>
   </div>
 </template>
+<style scoped>
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FEFEFE;
+  height:100vh;
+}
+  
+</style>

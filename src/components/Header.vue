@@ -6,7 +6,7 @@
       <button class="nav__lang nav__lang__usa">EN</button>
     </div>
 
-    <a id="nav__title" :style="style" href="#" data-content=""
+    <a id="nav__title" :style="style"
       ><img src="../assets/Union.svg" alt="union"
     /></a>
     <!-- <img class="nav__union" src="../assets/Union.svg" alt="union"> -->
@@ -35,25 +35,16 @@ export default {
 </script>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 @font-face {
   font-family: "Grtsk Giga";
   src: local("Grtsk"), url("../assets/fonts/GrtskGiga-Bold.ttf") format("truetype");
 }
+
 .nav {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0; */
   position: relative;
-  /* background-color: lightblue; */
 }
+
 .nav__group53 {
   position: absolute;
   left: 20px;
@@ -61,13 +52,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* position: relative; */
 }
+
 .nav__lang {
   opacity: 0;
   position: absolute;
-  left: 10px;
-  /* transition: opacity 0.3s; */
   border: none;
   cursor: pointer;
   font-size: 10px;
@@ -75,19 +64,26 @@ export default {
   transition: all 0.8s cubic-bezier(0.12, 0.41, 0.67, 0.95);
 }
 
-.nav__lang__ua {
-  margin-left: 50px;
+.nav__lang__usa{
+  left:20px;
 }
+
+.nav__lang__ua {
+  left:50px;
+}
+
 .nav__group53:hover .nav__lang__ua {
   opacity: 1;
-  /* margin-left: 50px; */
-  -webkit-transform: translate(0px);
+  -webkit-transform: translate(30px);
   transform: translate(30px);
+  transition: all 1s cubic-bezier(0.12, 0.41, 0.67, 0.95);
 }
+
 .nav__group53:hover .nav__lang__usa {
   opacity: 1;
-  -webkit-transform: translate(0px);
+  -webkit-transform: translate(30px);
   transform: translate(30px);
+  transition: all 1s cubic-bezier(0.12, 0.41, 0.67, 0.95);
 }
 
 a {
