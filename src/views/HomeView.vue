@@ -3,9 +3,13 @@
     <Header />
   </header>
   <main class="main">
-    <aside class="main__aside__left"><button @click="toAbout">where?</button></aside>
+    <aside class="main__aside__left">
+      <router-link to="/about"><h5>where?</h5></router-link>
+    </aside>
     <article class="main__article">
-      <section id="text" class="main__article__title">FULL-CYCLE EVENT AGENCY</section>
+      <section id="text" class="main__article__title">
+        <h1>FULL-CYCLE EVENT AGENCY</h1>
+      </section>
       <section id="run" class="main__article__runningtext">
         <div class="article__runningtext__top marquee marquee__top">
           <span>FULL-CYCLE EVENT AGENCY FULL-CYCLE EVENT AGENCY</span>
@@ -14,12 +18,16 @@
           <span>FULL-CYCLE EVENT AGENCY FULL-CYCLE EVENT AGENCY</span>
         </div>
       </section>
-      <section class="main__article__buttons">
+      <section class="main__article__textRotated">
         <img class="rot" src="../assets/buttons.svg" alt="buttons" />
       </section>
     </article>
-    <aside class="main__aside__right"><button @click="toAbout">what?</button></aside>
-    <aside class="main__aside__bottom"><button @click="toAbout">who?</button></aside>
+    <aside class="main__aside__right">
+      <router-link to="/about"><h5>what?</h5></router-link>
+    </aside>
+    <aside class="main__aside__bottom">
+      <router-link to="/about"><h5>who?</h5></router-link>
+    </aside>
   </main>
 </template>
 
@@ -74,11 +82,6 @@ export default {
         "translateZ(0) rotateX(" + y * 1.5 + "deg) rotateY(" + -x * 1.5 + "deg)";
     }
     document.addEventListener("mousemove", threedee, false);
-  },
-  methods: {
-    toAbout() {
-      this.$router.push({ name: "about" });
-    },
   },
 };
 </script>

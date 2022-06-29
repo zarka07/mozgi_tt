@@ -27,7 +27,7 @@
   word-wrap: break-word;
   z-index: 0;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 62px;
   text-align: center;
   font-family: "Grtsk Giga";
   width: 80vw;
@@ -35,6 +35,8 @@
   -webkit-transition-duration: 0.05s;
   -moz-tranform: translateZ(0);
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  color: #373737;
+  line-height: 110%;
 }
 
 @font-face {
@@ -55,6 +57,7 @@
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
+  line-height: 110%;
 }
 
 .marquee__top span {
@@ -115,16 +118,23 @@
   }
 }
 
-button {
+a {
   background: transparent;
   border: none;
   color: #000;
   font-family: "Grtsk Giga Semibold";
-  font-size: 12px;
+  text-decoration: none;
+  line-height: 140%;
+  /* font-size: 12px; */
 }
 
-button:hover {
+h5{
+  margin:0;
+}
+
+a:hover {
   color: #FFF;
+  
 }
 
 aside:after {
@@ -161,8 +171,10 @@ aside:hover:after {
   bottom: 25px;
 }
 
-.main__article__buttons {
+.main__article__textRotated {
   position: absolute;
+  width:118px;
+  height:118px;
 }
 
 img.rot:hover {
@@ -197,9 +209,9 @@ img.rot:hover {
     width: 1400px;
   }
 
-  .main__article__buttons {
-    top: 20vh;
-    left: 52vw;
+  .main__article__textRotated {
+    top: 80%;
+    left: 55%;
   }
 }
 
@@ -210,9 +222,9 @@ img.rot:hover {
     width: 1200px;
   }
 
-  .main__article__buttons {
-    top: 20vh;
-    left: 52vw;
+  .main__article__textRotated {
+    top: 80%;
+    left: 55%;
   }
 }
 
@@ -223,9 +235,12 @@ img.rot:hover {
     width: 1100px;
   }
 
-  .main__article__buttons {
-    top: 120%;
-    left: 60%;
+  .main__article__textRotated {
+    top: 80%;
+    left: 55%;
+  }
+  .main__article__title {
+    font-size: 55px !important;
   }
 }
 
@@ -236,9 +251,12 @@ img.rot:hover {
     width: 900px;
   }
 
-  .main__article__buttons {
-    top: 30vh;
-    left: 52vw;
+  .main__article__textRotated {
+    top: 80%;
+    left: 55%;
+  }
+  .main__article__title {
+    font-size: 45px !important;
   }
 }
 
@@ -248,9 +266,9 @@ img.rot:hover {
     width: 900px;
   }
 
-  .main__article__buttons {
-    top: 28vh;
-    left: 52vw;
+  .main__article__textRotated {
+    top: 83%;
+    left: 55%;
   }
 
   .main__article__title {
@@ -269,8 +287,8 @@ img.rot:hover {
     width: calc(100%+50px);
   }
 
-  .main__article__buttons {
-    top: 110%;
+  .main__article__textRotated {
+    top: 85%;
     left: 65%;
   }
 

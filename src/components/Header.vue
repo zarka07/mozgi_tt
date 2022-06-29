@@ -2,18 +2,18 @@
   <nav class="nav">
     <div class="nav__group53">
       <img src="../assets/Group53.svg" alt="group53" />
-      <button class="nav__lang nav__lang__ua">UA</button>
-      <button class="nav__lang nav__lang__usa">EN</button>
+      <h5 class="nav__lang nav__lang__ua">UA</h5>
+      <h5 class="nav__lang nav__lang__usa">EN</h5>
     </div>
 
     <a id="nav__title" :style="style"><img src="../assets/Union.svg" alt="union" /></a>
     
-    <button class="nav__group176" @click="showDropdown = !showDropdown">
+    <button type="button" class="nav__group176" @click="showDropdown = !showDropdown">
       <img src="../assets/Group176.svg" alt="two lines" />
       <ul class="dropdown" v-if="showDropdown">
-        <li><button @click="toAbout" class="dropDownButton">where?</button></li>
-        <li><button @click="toAbout" class="dropDownButton">what?</button></li>
-        <li><button @click="toAbout" class="dropDownButton">who?</button></li>
+        <li><router-link to="/about" class="dropDownButton"><h5> where?</h5></router-link></li>
+        <li><router-link to="/about" class="dropDownButton"><h5>what?</h5></router-link></li>
+        <li><router-link to="/about" class="dropDownButton"><h5>who?</h5></router-link></li>
       </ul>
     </button>
   </nav>
@@ -36,9 +36,6 @@ export default {
     set() {
       this.style =
         "clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%); display:inline-block";
-    },
-    toAbout() {
-      this.$router.push({ name: "about" });
     },
   },
 };
@@ -72,6 +69,7 @@ export default {
   text-align: right;
   visibility: hidden;
   padding: 0;
+  border: none;
 }
 
 .dropdown {
@@ -79,7 +77,7 @@ export default {
   padding: 0;
 }
 
-button.dropDownButton {
+.dropDownButton {
   margin-bottom: 5px;
   background: transparent;
   border: none;
@@ -88,11 +86,13 @@ button.dropDownButton {
   font-size: 12px;
 }
 
-button.dropDownButton:hover {
+.dropDownButton:hover {
   color: #fff;
 }
 
 .nav__lang {
+  font-family: "Grtsk Giga Semibold";
+  color:#fff;
   opacity: 0;
   position: absolute;
   border: none;
